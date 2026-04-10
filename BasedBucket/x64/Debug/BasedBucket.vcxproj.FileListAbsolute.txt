@@ -1,1 +1,3 @@
 C:\HigurumaPrime\Code\ConverterKliz\BasedBucket\BasedBucket\x64\Debug\BasedBucket.vcxproj.AssemblyReference.cache
+C:\HigurumaPrime\Code\ConverterKliz\BasedBucket\BasedBucket\x64\Debug\BasedBucket.MyForm.resources
+C:\HigurumaPrime\Code\ConverterKliz\BasedBucket\BasedBucket\x64\Debug\BasedBucket.vcxproj.GenerateResource.cache

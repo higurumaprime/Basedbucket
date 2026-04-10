@@ -35,6 +35,13 @@ namespace BasedBucket {
 			}
 		}
 
+	private: System::Windows::Forms::TextBox^ textBox1;
+
+	private: System::Windows::Forms::TextBox^ textBox2;
+
+	private: System::Windows::Forms::TextBox^ textBox3;
+	protected:
+
 	private:
 		/// <summary>
 		/// Обязательная переменная конструктора.
@@ -48,12 +55,51 @@ namespace BasedBucket {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyForm";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->SuspendLayout();
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(172, 44);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(117, 20);
+			this->textBox1->TabIndex = 1;
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(172, 102);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(117, 20);
+			this->textBox2->TabIndex = 3;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(172, 160);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(117, 20);
+			this->textBox3->TabIndex = 5;
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox3_TextChanged);
+			// 
+			// MyForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(463, 301);
+			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->textBox1);
+			this->Name = L"MyForm";
+			this->Text = L"MyForm";
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
